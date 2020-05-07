@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>example-component-spring-boot</name>
+    <description>an example component based on spring boot</description>
+    <url>https://github.com/harker2015/example-component</url>
+
+    <groupId>org.github.harker2015</groupId>
+    <artifactId>example-component-spring-boot</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
+        <example-component.springboot.version>1.0.0</example-component.springboot.version>
+        <example-component.core.version>1.0.0</example-component.core.version>
+    </properties>
+
+    <modules>
+        <module>example-component-spring-boot-autoconfigure</module>
+        <module>example-component-spring-boot-starter</module>
+        <module>example-component-core</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.github.harker2015</groupId>
+                <artifactId>example-component-spring-boot-autoconfigure</artifactId>
+                <version>${example-component.springboot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.github.harker2015</groupId>
+                <artifactId>example-component-core</artifactId>
+                <version>${example-component.core.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <!-- 发布到快照版本的仓库，即测试版本仓库 -->
+        <!--<snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://49.235.66.205:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>-->
+        <!-- 发布到发行版本的仓库中，即正式版本仓库 -->
+        <repository>
+            <id>maven-releases</id>
+            <url>http://49.235.66.205:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+</project>
