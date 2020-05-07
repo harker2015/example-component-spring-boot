@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 @ConditionalOnClass({LocalCache.class})
 public class ExampleComponentAutoConfiguration {
     @Bean
-//    @ConditionalOnMissingBean(name = "localCache")
+    @ConditionalOnMissingBean(name = "localCache")
     public LocalCache localCache(){
         return new LocalCache();
     }
