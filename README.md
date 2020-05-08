@@ -1,6 +1,6 @@
-# Spring Boot的组件开发示例
+<center># Spring Boot的组件开发示例</center>
 
-## 开发须知
+## 一、开发须知
 我们都知道Spring Boot简化了配置，开发者只需要引入一个spring boot的包，其他的复杂的依赖Spring Boot已经帮我们解决了。在使用基于Spring Boot组件时，是非常简单的，比如我们会用到MyBatis这个组件，我们只需要三步即可使用这个组件：
 1. 第一步：引用依赖：
     ```xml
@@ -28,7 +28,7 @@
         SysConfig findOne(Integer id);
     }
     ```
-## 方法论
+## 二、方法论
 那么如果我们想要做一个这样的基于Spring Boot的组件，要怎么开发呢，主要有以下几个步骤：
 1. 第一步：创建一个Maven项目，此项目本身只是个壳，代码都在三个子Module里面，这个项目的意义是把三个子Module的公共pom依赖放到一起，这样方便管理依赖。具体参考项目中的[**pom**](https://github.com/harker2015/example-component-spring-boot/blob/master/pom.xml)
 2. 第二步：创建三个子Module
