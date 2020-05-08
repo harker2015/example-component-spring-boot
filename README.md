@@ -46,7 +46,7 @@
         </dependency>
     ```
     - 第二板：添加注解
-    ```
+    ```java
         @Autowired
         LocalCache localCache;
     ```
