@@ -1,4 +1,4 @@
-<center># Spring Boot的组件开发示例</center>
+# Spring Boot的组件开发示例
 
 ## 一、开发须知
 我们都知道Spring Boot简化了配置，开发者只需要引入一个spring boot的包，其他的复杂的依赖Spring Boot已经帮我们解决了。在使用基于Spring Boot组件时，是非常简单的，比如我们会用到MyBatis这个组件，我们只需要三步即可使用这个组件：
